@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Logo size={52} showText={true} light={true} />
+            <Logo size={76} showText={true} light={true} />
             <p className="font-body text-white/50 text-sm mt-4 leading-relaxed max-w-xs">
               Your trusted local partner for Andaman travel experiences. Crafting island journeys since 2014.
             </p>

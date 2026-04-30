@@ -1,0 +1,15 @@
+Place your Andaman hero video here as: andaman-hero.mp4
+
+Video requirements:
+- Format: MP4 (H.264 codec)
+- Duration: 15-60 seconds (it will loop)
+- Resolution: 1920x1080 minimum
+- File size: Under 20MB recommended
+
+The video should show beautiful Andaman scenes:
+- Turquoise waters and beaches
+- Underwater coral reefs
+- Island aerial views
+- Radhanagar Beach, Havelock
+
+If no video is present, the site falls back to a beautiful blue ocean gradient.

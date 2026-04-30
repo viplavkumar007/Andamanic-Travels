@@ -35,7 +35,7 @@ export default function Navbar({ activeSection }) {
               onClick={(e) => { e.preventDefault(); handleNavClick('#hero') }}
               aria-label="Andamanic Travelopedia Home"
             >
-              <Logo size={scrolled ? 48 : 56} showText={true} light={!scrolled} />
+              <Logo size={scrolled ? 68 : 80} showText={true} light={!scrolled} />
             </a>
 
             {/* Desktop Nav */}
