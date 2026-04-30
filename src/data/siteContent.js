@@ -33,11 +33,13 @@ export const nav = [
 
 export const hero = {
   badge: "Andaman's #1 Trusted Travel Partner",
-  headline: "Discover Your\nIsland Paradise",
-  subheadline: "in the Andaman Islands",
+  headline: "Your Leisure\nOur Pleasure",
+  subheadline: "Escape Ordinary. Experience Andamans Like Never Before.",
   description:
     "Handcrafted tour packages by local experts. Pristine beaches, turquoise waters & unforgettable memories — tailored just for you.",
   cta: { primary: "Plan My Trip", secondary: "WhatsApp Us" },
+  description:
+    "From turquoise waters to handpicked luxury stays — we craft journeys that feel as good as they look.",
   stats: [
     { value: "5000+", label: "Happy Travelers" },
     { value: "100+", label: "Tour Packages" },
