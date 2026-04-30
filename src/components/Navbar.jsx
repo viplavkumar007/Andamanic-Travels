@@ -28,7 +28,7 @@ export default function Navbar({ activeSection }) {
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="flex items-center justify-between h-[4.5rem] sm:h-[5.5rem]">
             {/* Logo */}
             <a
               href="#hero"
@@ -37,9 +37,9 @@ export default function Navbar({ activeSection }) {
                 handleNavClick('#hero')
               }}
               aria-label="Andamanic Travelopedia Home"
-              className="block"
+              className="flex h-full items-center"
             >
-              <Logo size={scrolled ? 44 : 52} showText={true} light={!scrolled} />
+              <Logo size={scrolled ? 66 : 80} showText={true} light={!scrolled} />
             </a>
 
             {/* Desktop Nav */}
@@ -56,7 +56,7 @@ export default function Navbar({ activeSection }) {
                       e.preventDefault()
                       handleNavClick(item.href)
                     }}
-                    className={`relative px-3.5 py-2 text-sm font-semibold font-body transition-all duration-200 rounded-xl ${
+                    className={`relative px-4 py-2.5 text-sm font-semibold font-body transition-all duration-200 rounded-xl ${
                       isDeal
                         ? scrolled
                           ? 'text-brand-coral hover:text-orange-600'
@@ -84,14 +84,14 @@ export default function Navbar({ activeSection }) {
             </div>
 
             {/* CTA area */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-3.5">
               <a
                 href={`tel:${brand.phone}`}
-                className={`flex items-center gap-2 text-sm font-semibold font-body transition-colors ${
+                className={`flex items-center gap-2 text-[15px] font-semibold font-body transition-colors ${
                   scrolled ? 'text-brand-blue hover:text-brand-darkblue' : 'text-white/80 hover:text-white'
                 }`}
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-[18px] h-[18px]" />
                 {brand.phoneDisplay}
               </a>
               <a
@@ -100,7 +100,7 @@ export default function Navbar({ activeSection }) {
                   e.preventDefault()
                   handleNavClick('#contact')
                 }}
-                className="px-5 py-2.5 bg-brand-orange text-white text-sm font-semibold font-body rounded-xl hover:bg-orange-600 active:scale-95 transition-all duration-200 shadow-orange focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2"
+                className="px-6 py-3 bg-brand-orange text-white text-sm font-semibold font-body rounded-xl hover:bg-orange-600 active:scale-95 transition-all duration-200 shadow-orange focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2"
               >
                 Get a Quote
               </a>
@@ -109,7 +109,7 @@ export default function Navbar({ activeSection }) {
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden p-2 rounded-xl transition-colors ${
+              className={`md:hidden p-2.5 rounded-xl transition-colors ${
                 scrolled ? 'text-brand-darkblue hover:bg-brand-sky' : 'text-white hover:bg-white/10'
               }`}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -129,7 +129,7 @@ export default function Navbar({ activeSection }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 top-16 sm:top-20 z-40 glass border-b border-brand-blue/10 shadow-xl md:hidden"
+            className="fixed inset-x-0 top-[4.5rem] sm:top-[5.5rem] z-40 glass border-b border-brand-blue/10 shadow-xl md:hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
               {nav.map((item) => {

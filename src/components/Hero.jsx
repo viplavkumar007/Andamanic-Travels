@@ -4,7 +4,7 @@ import { ChevronDown, MessageCircle, Phone, Star, Shield, Clock } from 'lucide-r
 import { brand, hero } from '../data/siteContent'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
-const heroVideo = '/andaman-hero.mp4.mp4'
+const heroVideo = '/Screen_Recording_20260430_140926_Chrome.mp4'
 
 const stagger = {
   hidden: {},
@@ -45,7 +45,7 @@ export default function Hero() {
         {!videoError ? (
           <video
             ref={videoRef}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 h-full w-full min-w-full object-cover"
             autoPlay
             muted
             defaultMuted

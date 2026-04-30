@@ -1,7 +1,7 @@
 import React from 'react'
-import logoImage from '../../assets/andamanic-logo.jpeg'
+import logoImage from '../../assets/andamanic-logo.png'
 
-export default function Logo({ size = 52, showText = true, light = false }) {
+export default function Logo({ size = 60, showText = true, light = false }) {
   return (
     <div className="flex items-center gap-3">
       <div
@@ -22,14 +22,14 @@ export default function Logo({ size = 52, showText = true, light = false }) {
       {showText && (
         <div className="flex flex-col leading-none">
           <span
-            className={`font-display font-bold text-[1.1rem] tracking-tight leading-tight ${
+            className={`font-display font-bold text-[1.22rem] tracking-tight leading-tight ${
               light ? 'text-white' : 'text-brand-darkblue'
             }`}
           >
             Andamanic
           </span>
           <span
-            className={`font-body text-[10px] font-semibold uppercase tracking-[0.22em] mt-0.5 ${
+            className={`mt-0.5 font-body text-[10.5px] font-semibold uppercase tracking-[0.18em] ${
               light ? 'text-brand-cyan' : 'text-brand-cyan'
             }`}
           >
