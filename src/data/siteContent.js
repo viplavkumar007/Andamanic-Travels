@@ -15,28 +15,28 @@ export const brand = {
   youtube: "https://youtube.com/@andamanictravelopedia",
   mapEmbed: "https://maps.google.com/maps?q=Port+Blair+Andaman&output=embed",
   colors: {
-    primary: "#2A5FA5",
-    secondary: "#1a3d6e",
-    accent: "#4A7FC1",
+    primary: "#1A6FFF",
+    secondary: "#0A2748",
+    accent: "#00BFA5",
+    coral: "#FF6B4A",
+    gold: "#F59E0B",
   },
-  // Replace this with your actual Andaman video URL (YouTube embed or direct MP4)
-  heroVideoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", // REPLACE with actual Andaman video
-  heroVideoYoutube: "https://www.youtube.com/embed/6eVbQ3-w9kQ?autoplay=1&mute=1&loop=1&playlist=6eVbQ3-w9kQ&controls=0&showinfo=0&rel=0", // REPLACE with Andaman video ID
 };
 
 export const nav = [
+  { label: "Deals", href: "#deals" },
+  { label: "Packages", href: "#packages" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const hero = {
-  headline: "Discover the\nUntouched Paradise",
-  subheadline: "of the Andaman Islands",
+  badge: "Andaman's #1 Trusted Travel Partner",
+  headline: "Discover Your\nIsland Paradise",
+  subheadline: "in the Andaman Islands",
   description:
-    "Customized tour packages crafted with local expertise. From pristine beaches to underwater wonders — we make every journey unforgettable.",
+    "Handcrafted tour packages by local experts. Pristine beaches, turquoise waters & unforgettable memories — tailored just for you.",
   cta: { primary: "Plan My Trip", secondary: "WhatsApp Us" },
   stats: [
     { value: "5000+", label: "Happy Travelers" },
@@ -45,6 +45,243 @@ export const hero = {
     { value: "4.9★", label: "Average Rating" },
   ],
 };
+
+// ─── Best Deals ────────────────────────────────────────────────────────────
+
+export const bestDeals = [
+  {
+    id: "bd1",
+    title: "Ultimate Andaman Experience",
+    nights: "7 Nights / 8 Days",
+    originalPrice: "₹55,999",
+    price: "₹42,999",
+    saving: "Save ₹13,000",
+    image:
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=900&q=80",
+    badge: "🏆 Best Seller",
+    category: "All Inclusive",
+    rating: 4.9,
+    reviews: 312,
+    highlights: [
+      "Havelock Luxury Resort",
+      "Neil Island Tour",
+      "Scuba Diving",
+      "Private Beach Dinner",
+      "All Water Sports",
+      "Airport Transfers",
+    ],
+  },
+  {
+    id: "bd2",
+    title: "Honeymoon Special Package",
+    nights: "5 Nights / 6 Days",
+    originalPrice: "₹36,999",
+    price: "₹28,999",
+    saving: "Save ₹8,000",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+    badge: "❤️ Most Popular",
+    category: "Couples",
+    rating: 4.8,
+    reviews: 187,
+    highlights: [
+      "Beachfront Resort Stay",
+      "Sunset Cruise",
+      "Couple Spa Session",
+      "Candlelit Dinner",
+      "Snorkeling",
+      "Airport Transfers",
+    ],
+  },
+  {
+    id: "bd3",
+    title: "Family Adventure Pack",
+    nights: "6 Nights / 7 Days",
+    originalPrice: "₹42,000",
+    price: "₹32,999",
+    saving: "Save ₹9,000",
+    image:
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80",
+    badge: "👨‍👩‍👧 Family Pick",
+    category: "Family",
+    rating: 4.9,
+    reviews: 241,
+    highlights: [
+      "3 Islands Tour",
+      "Glass Bottom Boat",
+      "Elephant Beach",
+      "Cellular Jail Visit",
+      "Jet Skiing",
+      "All Ferry Tickets",
+    ],
+  },
+];
+
+// ─── Package Categories ────────────────────────────────────────────────────
+
+export const packages = {
+  couple: [
+    {
+      id: "c1",
+      title: "Romantic Andaman Escape",
+      nights: "5N / 6D",
+      price: "₹28,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80",
+      badge: "Best Seller",
+      highlights: [
+        "Havelock Island Stay",
+        "Sunset Beach Dinner",
+        "Snorkeling Trip",
+        "Couple Spa Session",
+      ],
+      includes: ["Hotel", "Ferry", "Transfers", "Breakfast"],
+    },
+    {
+      id: "c2",
+      title: "Honeymoon Paradise",
+      nights: "7N / 8D",
+      price: "₹42,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1540541338537-71d7efdef0f9?auto=format&fit=crop&w=700&q=80",
+      badge: "Premium",
+      highlights: [
+        "Luxury Beach Resort",
+        "Private Island Tour",
+        "Scuba Diving",
+        "Candlelit Dinner",
+      ],
+      includes: ["5-Star Hotel", "Ferry", "Transfers", "All Meals"],
+    },
+    {
+      id: "c3",
+      title: "Sunset Bliss Package",
+      nights: "3N / 4D",
+      price: "₹18,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1559494007-9f5847c49d94?auto=format&fit=crop&w=700&q=80",
+      badge: "Budget Pick",
+      highlights: [
+        "Port Blair Tour",
+        "Ross Island Visit",
+        "Sea Walk",
+        "Beach BBQ Night",
+      ],
+      includes: ["Hotel", "Sightseeing", "Transfers", "Breakfast"],
+    },
+  ],
+  family: [
+    {
+      id: "f1",
+      title: "Family Fun Andaman",
+      nights: "5N / 6D",
+      price: "₹24,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80",
+      badge: "Most Popular",
+      highlights: [
+        "Port Blair + Havelock",
+        "Family Snorkeling",
+        "Cellular Jail",
+        "Water Sports",
+      ],
+      includes: ["Hotel", "Ferry", "Transfers", "Breakfast"],
+    },
+    {
+      id: "f2",
+      title: "3-Island Family Explorer",
+      nights: "7N / 8D",
+      price: "₹34,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=80",
+      badge: "Best Value",
+      highlights: [
+        "Havelock + Neil + PB",
+        "Glass-Bottom Boat",
+        "Jet Skiing",
+        "Island Picnic",
+      ],
+      includes: ["Hotel", "All Ferries", "Transfers", "Breakfast"],
+    },
+    {
+      id: "f3",
+      title: "Quick Family Getaway",
+      nights: "3N / 4D",
+      price: "₹15,999",
+      priceNote: "per person",
+      image:
+        "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=700&q=80",
+      badge: "Weekend Special",
+      highlights: [
+        "Corbyn's Cove Beach",
+        "Ross & North Bay",
+        "Sea Walk",
+        "Sound & Light Show",
+      ],
+      includes: ["Hotel", "Sightseeing", "Transfers", "Breakfast"],
+    },
+  ],
+  group: [
+    {
+      id: "g1",
+      title: "Group Adventure Trip",
+      nights: "5N / 6D",
+      price: "₹19,999",
+      priceNote: "per person (min 10)",
+      image:
+        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80",
+      badge: "Best for Groups",
+      highlights: [
+        "Scuba Diving",
+        "Sea Walking",
+        "Island Hopping",
+        "Bonfire Night",
+      ],
+      includes: ["Hotel", "Ferry", "Transfers", "Breakfast"],
+    },
+    {
+      id: "g2",
+      title: "Corporate Retreat",
+      nights: "4N / 5D",
+      price: "₹22,999",
+      priceNote: "per person (min 20)",
+      image:
+        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80",
+      badge: "Corporate",
+      highlights: [
+        "Team Building Activities",
+        "Resort Conference Hall",
+        "Gala Dinner",
+        "Group Water Sports",
+      ],
+      includes: ["5-Star Hotel", "Ferry", "Transfers", "All Meals"],
+    },
+    {
+      id: "g3",
+      title: "Friends Island Trip",
+      nights: "6N / 7D",
+      price: "₹28,999",
+      priceNote: "per person (min 6)",
+      image:
+        "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=700&q=80",
+      badge: "Friends Favorite",
+      highlights: [
+        "Full Island Coverage",
+        "Night Fishing",
+        "Beach Party",
+        "All Water Sports",
+      ],
+      includes: ["Hotel", "All Ferries", "Transfers", "Breakfast"],
+    },
+  ],
+};
+
+// ─── Services (What We Offer) ──────────────────────────────────────────────
 
 export const services = [
   {
@@ -74,7 +311,7 @@ export const services = [
     icon: "Car",
     title: "Airport Transfers & Transport",
     description:
-      "Comfortable, reliable transfers from airport to hotel and seamless local transportation throughout your trip.",
+      "Comfortable, reliable transfers from airport to hotel and seamless local transportation throughout.",
   },
   {
     id: 5,
@@ -134,11 +371,13 @@ export const services = [
   },
 ];
 
+// ─── About ────────────────────────────────────────────────────────────────
+
 export const about = {
   headline: "Born in the Islands,\nBuilt for Travelers",
   body: [
     "Andamanic Travelopedia was founded by islanders who grew up exploring every beach, reef, and hidden cove the Andamans offer. We don't just sell tours — we share our home.",
-    "With over a decade of on-ground experience, our team brings unmatched local knowledge to every itinerary. From the iconic Radhanagar Beach to the untouched shores of Little Andaman, we know where the magic lives.",
+    "With over a decade of on-ground experience, our team brings unmatched local knowledge to every itinerary. From iconic Radhanagar Beach to the untouched shores of Little Andaman, we know where the magic lives.",
     "We believe travel should be seamless, personal, and transformative. Every package is crafted with care, every detail coordinated, and every traveler treated like family.",
   ],
   features: [
@@ -147,7 +386,27 @@ export const about = {
     { icon: "Award", label: "Certified Tour Operators" },
     { icon: "ThumbsUp", label: "5000+ Happy Guests" },
   ],
+  photos: [
+    {
+      src: "https://images.unsplash.com/photo-1559494007-9f5847c49d94?auto=format&fit=crop&w=700&q=80",
+      alt: "Radhanagar Beach, Havelock Island",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=500&q=80",
+      alt: "Luxury beach resort pool",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80",
+      alt: "Tropical beach sunset",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=500&q=80",
+      alt: "Underwater snorkeling and scuba",
+    },
+  ],
 };
+
+// ─── Testimonials ─────────────────────────────────────────────────────────
 
 export const testimonials = [
   {
@@ -157,6 +416,7 @@ export const testimonials = [
     rating: 5,
     text: "Our Andaman honeymoon was pure magic. Every detail was perfectly arranged — the beach resort, the sunset cruise, even the scuba session. Andamanic Travelopedia made our dream trip a reality without any stress.",
     avatar: "PR",
+    photo: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=100&h=100&q=80",
   },
   {
     name: "Vikram Nair",
@@ -165,6 +425,7 @@ export const testimonials = [
     rating: 5,
     text: "Traveled with my family of 6 including elderly parents. The team arranged everything from airport pickup to wheelchair assistance at Cellular Jail. Exceptional attention to every family member's needs!",
     avatar: "VN",
+    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80",
   },
   {
     name: "Sneha Patel",
@@ -173,6 +434,7 @@ export const testimonials = [
     rating: 5,
     text: "Scuba diving at Havelock was life-changing! The guides were certified professionals who made first-timers like me feel completely safe. The island-hopping schedule was perfectly paced.",
     avatar: "SP",
+    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80",
   },
   {
     name: "TechCorp India",
@@ -181,6 +443,7 @@ export const testimonials = [
     rating: 5,
     text: "Organized a 50-person corporate team trip and everything was flawlessly executed. Ferry bookings, hotel rooms, team activities, group dinners — all managed without a single hiccup. Will book again!",
     avatar: "TC",
+    photo: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=100&h=100&q=80",
   },
   {
     name: "Arun & Family",
@@ -189,8 +452,11 @@ export const testimonials = [
     rating: 5,
     text: "Got a premium experience within our modest budget. They know exactly which islands to visit, where to eat authentic seafood, and how to get the best value without missing anything.",
     avatar: "AF",
+    photo: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=100&h=100&q=80",
   },
 ];
+
+// ─── FAQs ─────────────────────────────────────────────────────────────────
 
 export const faqs = [
   {
@@ -223,8 +489,11 @@ export const faqs = [
   },
 ];
 
+// ─── Contact ──────────────────────────────────────────────────────────────
+
 export const contact = {
   headline: "Ready to Explore Paradise?",
   subtext: "Get a free, customized quote within 2 hours. No commitment required.",
-  whatsappMessage: "Hi! I'm interested in booking an Andaman tour package. Could you share details?",
+  whatsappMessage:
+    "Hi! I'm interested in booking an Andaman tour package. Could you share details?",
 };

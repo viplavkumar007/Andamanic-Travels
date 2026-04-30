@@ -5,36 +5,30 @@ import { brand } from '../data/siteContent'
 
 export default function CTA() {
   const whatsappLink = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(
-    'Hi! I\'d like to get a customized Andaman tour package quote.'
+    "Hi! I'd like to get a customized Andaman tour package quote."
   )}`
 
   return (
     <section className="relative overflow-hidden py-20">
-      {/* Animated ocean gradient background */}
-      <div className="absolute inset-0 ocean-gradient" />
+      {/* Deep navy background */}
+      <div className="absolute inset-0 premium-dark" />
 
-      {/* Glowing pulse overlay */}
+      {/* Palette color glows */}
       <motion.div
-        className="absolute inset-0"
-        animate={{ opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute inset-0 pointer-events-none"
+        animate={{ opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(74,127,193,0.4) 0%, transparent 70%)',
+          background:
+            'radial-gradient(ellipse at 30% 50%, rgba(18,197,212,0.2) 0%, transparent 55%), radial-gradient(ellipse at 70% 50%, rgba(212,43,107,0.15) 0%, transparent 55%)',
         }}
       />
+
+      {/* Palette stripe bar at top */}
+      <div className="absolute top-0 left-0 right-0 h-1 palette-stripe opacity-80" />
 
       {/* Wave pattern */}
-      <div className="absolute inset-0 wave-bg opacity-20" />
-
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
-        }}
-      />
+      <div className="absolute inset-0 wave-bg opacity-15" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -43,34 +37,37 @@ export default function CTA() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 mb-6">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-white/80 text-xs font-mono tracking-[0.2em] uppercase">
+          {/* Live badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-cyan/30 bg-brand-cyan/10 mb-6">
+            <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
+            <span className="text-brand-cyan text-xs font-mono font-semibold tracking-[0.2em] uppercase">
               Booking Lines Open Now
             </span>
           </div>
 
           <h2 className="font-display font-bold text-white text-4xl sm:text-5xl md:text-6xl mb-4 leading-tight">
             Your Island Adventure
-            <span className="block text-blue-200">Starts With One Call</span>
+            <span className="block text-brand-cyan">Starts With One Call</span>
           </h2>
-          <p className="font-body text-white/70 text-lg max-w-xl mx-auto mb-10">
-            Talk to our local experts. Get a personalized itinerary and quote within 2 hours — completely free.
+          <p className="font-body text-white/65 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            Talk to our local experts. Get a personalized itinerary and quote within 2 hours —
+            completely free.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Primary: orange call button */}
             <motion.a
               href={`tel:${brand.phone}`}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="group flex items-center gap-3 px-8 py-4 bg-white text-brand-blue font-bold font-body rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] transition-all duration-200"
+              className="group flex items-center gap-3 px-8 py-4 bg-brand-orange hover:bg-orange-600 text-white font-bold font-body rounded-2xl shadow-orange hover:shadow-[0_12px_40px_rgba(240,85,40,0.5)] transition-all duration-200"
             >
               <Phone className="w-5 h-5" />
               <span>{brand.phoneDisplay}</span>
               <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
             </motion.a>
 
+            {/* Secondary: WhatsApp green */}
             <motion.a
               href={whatsappLink}
               target="_blank"
@@ -85,6 +82,9 @@ export default function CTA() {
           </div>
         </motion.div>
       </div>
+
+      {/* Palette stripe bar at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 palette-stripe opacity-80" />
     </section>
   )
 }

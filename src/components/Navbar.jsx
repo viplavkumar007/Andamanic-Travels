@@ -23,7 +23,7 @@ export default function Navbar({ activeSection }) {
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'glass shadow-[0_2px_24px_rgba(42,95,165,0.12)] border-b border-brand-blue/10'
+            ? 'glass shadow-[0_2px_30px_rgba(26,111,255,0.1)] border-b border-brand-blue/8'
             : 'bg-transparent'
         }`}
       >
@@ -32,25 +32,36 @@ export default function Navbar({ activeSection }) {
             {/* Logo */}
             <a
               href="#hero"
-              onClick={(e) => { e.preventDefault(); handleNavClick('#hero') }}
+              onClick={(e) => {
+                e.preventDefault()
+                handleNavClick('#hero')
+              }}
               aria-label="Andamanic Travelopedia Home"
-              className="block translate-y-1"
+              className="block"
             >
-              <Logo size={scrolled ? 62 : 74} showText={true} light={!scrolled} />
+              <Logo size={scrolled ? 44 : 52} showText={true} light={!scrolled} />
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-0.5">
               {nav.map((item) => {
                 const sectionId = item.href.replace('#', '')
                 const isActive = activeSection === sectionId
+                const isDeal = item.label === 'Deals'
                 return (
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={(e) => { e.preventDefault(); handleNavClick(item.href) }}
-                    className={`relative px-4 py-2 text-sm font-semibold font-body transition-colors duration-200 rounded-lg underline-slide ${
-                      scrolled
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(item.href)
+                    }}
+                    className={`relative px-3.5 py-2 text-sm font-semibold font-body transition-all duration-200 rounded-xl ${
+                      isDeal
+                        ? scrolled
+                          ? 'text-brand-coral hover:text-orange-600'
+                          : 'text-orange-300 hover:text-orange-200'
+                        : scrolled
                         ? isActive
                           ? 'text-brand-blue'
                           : 'text-brand-darkblue hover:text-brand-blue'
@@ -63,7 +74,7 @@ export default function Navbar({ activeSection }) {
                     {isActive && (
                       <motion.span
                         layoutId="nav-indicator"
-                        className="absolute inset-0 rounded-lg bg-brand-blue/10"
+                        className="absolute inset-0 rounded-xl bg-brand-blue/10"
                         style={{ zIndex: -1 }}
                       />
                     )}
@@ -72,7 +83,7 @@ export default function Navbar({ activeSection }) {
               })}
             </div>
 
-            {/* CTA Button */}
+            {/* CTA area */}
             <div className="hidden md:flex items-center gap-3">
               <a
                 href={`tel:${brand.phone}`}
@@ -85,8 +96,11 @@ export default function Navbar({ activeSection }) {
               </a>
               <a
                 href="#contact"
-                onClick={(e) => { e.preventDefault(); handleNavClick('#contact') }}
-                className="px-5 py-2.5 bg-brand-blue text-white text-sm font-semibold font-body rounded-xl hover:bg-brand-darkblue active:scale-95 transition-all duration-200 shadow-md hover:shadow-brand-blue/30 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavClick('#contact')
+                }}
+                className="px-5 py-2.5 bg-brand-orange text-white text-sm font-semibold font-body rounded-xl hover:bg-orange-600 active:scale-95 transition-all duration-200 shadow-orange focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2"
               >
                 Get a Quote
               </a>
@@ -95,7 +109,7 @@ export default function Navbar({ activeSection }) {
             {/* Mobile toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className={`md:hidden p-2 rounded-lg transition-colors ${
+              className={`md:hidden p-2 rounded-xl transition-colors ${
                 scrolled ? 'text-brand-darkblue hover:bg-brand-sky' : 'text-white hover:bg-white/10'
               }`}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -118,16 +132,24 @@ export default function Navbar({ activeSection }) {
             className="fixed inset-x-0 top-16 sm:top-20 z-40 glass border-b border-brand-blue/10 shadow-xl md:hidden"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-              {nav.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(item.href) }}
-                  className="px-4 py-3 text-brand-darkblue font-semibold font-body rounded-xl hover:bg-brand-sky transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {nav.map((item) => {
+                const isDeal = item.label === 'Deals'
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      handleNavClick(item.href)
+                    }}
+                    className={`px-4 py-3 font-semibold font-body rounded-xl hover:bg-brand-sky transition-colors ${
+                      isDeal ? 'text-brand-coral' : 'text-brand-darkblue'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                )
+              })}
               <div className="mt-2 pt-3 border-t border-brand-blue/10 flex flex-col gap-2">
                 <a
                   href={`tel:${brand.phone}`}
@@ -138,8 +160,11 @@ export default function Navbar({ activeSection }) {
                 </a>
                 <a
                   href="#contact"
-                  onClick={(e) => { e.preventDefault(); handleNavClick('#contact') }}
-                  className="px-4 py-3 bg-brand-blue text-white font-semibold font-body rounded-xl text-center"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleNavClick('#contact')
+                  }}
+                  className="px-4 py-3 bg-brand-orange text-white font-semibold font-body rounded-xl text-center hover:bg-orange-600 transition-colors"
                 >
                   Get a Free Quote
                 </a>

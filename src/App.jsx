@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import BestDeals from './components/sections/BestDeals'
+import Packages from './components/sections/Packages'
 import Services from './components/sections/Services'
 import About from './components/sections/About'
 import Testimonials from './components/sections/Testimonials'
@@ -12,7 +14,7 @@ import Toast from './components/ui/Toast'
 import WhatsAppFloat from './components/ui/WhatsAppFloat'
 import { useScrollSpy } from './hooks/useScrollSpy'
 
-const SECTION_IDS = ['hero', 'services', 'about', 'testimonials', 'faq', 'contact']
+const SECTION_IDS = ['hero', 'deals', 'packages', 'services', 'about', 'testimonials', 'faq', 'contact']
 
 export default function App() {
   const activeSection = useScrollSpy(SECTION_IDS, 120)
@@ -30,7 +32,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-brand-light">
       <a
-        href="#services"
+        href="#deals"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-xl font-body font-semibold"
       >
         Skip to main content
@@ -40,6 +42,8 @@ export default function App() {
 
       <main>
         <Hero />
+        <BestDeals />
+        <Packages />
         <Services />
         <About />
         <Testimonials />
